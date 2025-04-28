@@ -1,9 +1,9 @@
 
 import { ExpressError } from "../../../utils/errors/expressErrors";
-import DI_NAMES from "../../dependency-injection/names";
+import DINames from "../../dependency-injection/names";
 
 const applyErrorHandler = (app, diContainer) => {
-    const logger = diContainer.resolve(DI_NAMES.logger);
+    const logger = diContainer.resolve(DINames.Logger);
 
     const errorHandler = (err, req, res, next) => {
         logger.error(err);

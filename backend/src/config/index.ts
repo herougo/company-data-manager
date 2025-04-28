@@ -1,10 +1,10 @@
 import dotenv from "dotenv";
-import { ENVIRONMENTS } from "../utils/enums";
+import { Environments } from "../utils/enums";
 import { InvalidConfigError, UndefinedEnvironment } from "../utils/errors/internalErrors";
 
 const buildConfig = () => {
     const nodeEnv = process.env.NODE_ENV;
-    const envPath = nodeEnv === ENVIRONMENTS.test ? "test.env" : ".env";
+    const envPath = nodeEnv === Environments.Test ? "test.env" : ".env";
 
     dotenv.config({path: envPath});
 

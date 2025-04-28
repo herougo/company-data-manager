@@ -1,6 +1,6 @@
-const ENVIRONMENTS = {
-    dev: "dev",
-    test: "test"
+enum Environments {
+    Dev = "dev",
+    Test = "test"
 }
 
-export { ENVIRONMENTS };
+export { Environments };

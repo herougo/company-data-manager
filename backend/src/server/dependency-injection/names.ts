@@ -1,5 +1,5 @@
-enum DI_NAMES {
-    logger = "logger",
+enum DINames {
+    Logger = "logger",
 };
 
-export default DI_NAMES;
+export default DINames;

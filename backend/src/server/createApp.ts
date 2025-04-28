@@ -5,11 +5,11 @@ import applyMiddleware from "./middleware";
 import initAllLoaders from "../loaders";
 import { applyAllHandlers } from "./handlers";
 import buildDIContainer from "./dependency-injection/buildDIContainer";
-import DI_NAMES from "./dependency-injection/names";
+import DINames from "./dependency-injection/names";
 
 const createApp = async (customDependenciesMap = null) => {
     const diContainer = buildDIContainer(customDependenciesMap);
-    const logger = diContainer.resolve(DI_NAMES.logger);
+    const logger = diContainer.resolve(DINames.Logger);
     await initAllLoaders(logger);
 
     const app = express();

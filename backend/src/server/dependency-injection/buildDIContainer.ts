@@ -1,12 +1,12 @@
 import Logger from "../../utils/logger";
 import DependencyInjectionContainer, { DependencyMap } from "./container";
-import DI_NAMES from "./names";
+import DINames from "./names";
 
 
 const buildDIContainer = (customDependenciesMap: DependencyMap) => {
     const container = new DependencyInjectionContainer(customDependenciesMap);
 
-    const logger = container.register(DI_NAMES.logger, new Logger());
+    const logger = container.register(DINames.Logger, new Logger());
     
     return container;
 }

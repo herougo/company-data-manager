@@ -1,12 +1,12 @@
 class MissingDependencyError extends Error {
-    constructor(dependencyName) {
+    constructor(dependencyName: string) {
         super();
         this.message = `Missing dependency ${dependencyName}`;
     }
 }
 
 class ExistingDependencyError extends Error {
-    constructor(dependencyName) {
+    constructor(dependencyName: string) {
         super();
         this.message = `Existing dependency ${dependencyName}`;
     }
@@ -25,6 +25,8 @@ class UndefinedEnvironment extends Error {
         this.message = "Undefined Environment";
     }
 }
+
+export {};
 
 module.exports = {
     MissingDependencyError, ExistingDependencyError, InvalidConfig, UndefinedEnvironment

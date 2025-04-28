@@ -3,4 +3,4 @@ const ENVIRONMENTS = {
     test: "test"
 }
 
-module.exports = { ENVIRONMENTS };
+export { ENVIRONMENTS };

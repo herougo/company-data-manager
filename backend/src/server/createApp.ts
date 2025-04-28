@@ -1,11 +1,11 @@
 
-const express = require("express");
-const applyRoutes = require("./routes");
-const applyMiddleware = require("./middleware");
-const initAllLoaders = require("../loaders");
-const { applyAllHandlers } = require("./handlers");
-const buildDIContainer = require("./dependency-injection/buildDIContainer");
-const DI_NAMES = require("./dependency-injection/names");
+import express from "express";
+import applyRoutes from "./routes";
+import applyMiddleware from "./middleware";
+import initAllLoaders from "../loaders";
+import { applyAllHandlers } from "./handlers";
+import buildDIContainer from "./dependency-injection/buildDIContainer";
+import DI_NAMES from "./dependency-injection/names";
 
 const createApp = async (customDependenciesMap = null) => {
     const diContainer = buildDIContainer(customDependenciesMap);
@@ -20,4 +20,4 @@ const createApp = async (customDependenciesMap = null) => {
     return { app, diContainer };
 };
 
-module.exports = createApp;
+export default createApp;

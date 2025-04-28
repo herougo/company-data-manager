@@ -1,7 +1,7 @@
-const CONFIG = require("../config");
+import CONFIG from "../config";
 
 const initAllLoaders = async (logger) => {
     
 }
 
-module.exports = initAllLoaders;
+export default initAllLoaders;

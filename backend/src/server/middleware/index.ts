@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const CONFIG = require("../../config");
+import express from "express";
+import cors from "cors";
+import CONFIG from "../../config";
 
 const applyMiddleware = (app, diContainer) => {
     // transforms req.body from string to json if json data is passed and
@@ -21,4 +21,4 @@ const applyMiddleware = (app, diContainer) => {
     }));
 }
 
-module.exports = applyMiddleware;
+export default applyMiddleware;

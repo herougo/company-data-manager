@@ -1,7 +1,5 @@
 
-// Adapted from https://socket.io/docs/v4/server-api/#serverattachhttpserver-options
-const http = require("http");
-const CONFIG = require("../config");
+import http from "http";
 
 const createServer = (app, diContainer) => {
     const httpServer = http.createServer(app);
@@ -9,4 +7,4 @@ const createServer = (app, diContainer) => {
     return httpServer;
 }
 
-module.exports = createServer;
+export default createServer;

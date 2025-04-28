@@ -1,5 +1,5 @@
 
-const { MissingDependencyError, ExistingDependencyError } = require("../../utils/errors/internalErrors");
+import { MissingDependencyError, ExistingDependencyError } from "../../utils/errors/internalErrors";
 
 class DependencyInjectionContainer {
     constructor(customDependenciesMap) {
@@ -27,4 +27,4 @@ class DependencyInjectionContainer {
     }
 }
 
-module.exports = DependencyInjectionContainer;
+export default DependencyInjectionContainer;

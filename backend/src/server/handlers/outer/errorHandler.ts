@@ -1,6 +1,6 @@
 
-const { ExpressError } = require("../../../utils/errors/expressErrors");
-const DI_NAMES = require("../../dependency-injection/names");
+import { ExpressError } from "../../../utils/errors/expressErrors";
+import DI_NAMES from "../../dependency-injection/names";
 
 const applyErrorHandler = (app, diContainer) => {
     const logger = diContainer.resolve(DI_NAMES.logger);
@@ -24,4 +24,4 @@ const applyErrorHandler = (app, diContainer) => {
     app.use(errorHandler);
 };
 
-module.exports = applyErrorHandler;
+export default applyErrorHandler;

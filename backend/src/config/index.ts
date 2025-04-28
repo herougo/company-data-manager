@@ -1,6 +1,6 @@
-const dotenv = require("dotenv");
-const { ENVIRONMENTS } = require("../utils/enums");
-const { ConfigError, UndefinedEnvironment } = require("../utils/errors/internalErrors");
+import dotenv from "dotenv";
+import { ENVIRONMENTS } from "../utils/enums";
+import { ConfigError, UndefinedEnvironment } from "../utils/errors/internalErrors";
 
 const buildConfig = () => {
     const nodeEnv = process.env.NODE_ENV;
@@ -30,4 +30,4 @@ const buildConfig = () => {
 
 const CONFIG = buildConfig();
 
-module.exports = CONFIG;
+export default CONFIG;

@@ -30,6 +30,6 @@ class ServerError extends ExpressError {
     }
 }
 
-module.exports = {
+export {
     ExpressError, NotFoundError, UnauthorizedError, BadRequestError, ServerError
 }

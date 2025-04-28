@@ -1,4 +1,4 @@
-const { NotFoundError } = require("../../../utils/errors/expressErrors");
+import { NotFoundError } from "../../../utils/errors/expressErrors";
 
 const applyNotFoundHandler = (app, diContainer) => {
     // for catching 404 and forwarding to error handler
@@ -11,4 +11,4 @@ const applyNotFoundHandler = (app, diContainer) => {
 }
 
 
-module.exports = applyNotFoundHandler;
+export default applyNotFoundHandler;

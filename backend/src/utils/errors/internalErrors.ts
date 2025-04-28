@@ -26,8 +26,6 @@ class UndefinedEnvironment extends Error {
     }
 }
 
-export {};
-
-module.exports = {
+export {
     MissingDependencyError, ExistingDependencyError, InvalidConfig, UndefinedEnvironment
-}
+};

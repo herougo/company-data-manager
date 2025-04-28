@@ -1,12 +1,12 @@
 
-const applyErrorHandler = require("./outer/errorHandler");
-const applyNotFoundHandler = require("./outer/notFoundHandler");
+import applyErrorHandler from "./outer/errorHandler";
+import applyNotFoundHandler from "./outer/notFoundHandler";
 
 const applyAllHandlers = (app, diContainer) => {
     applyErrorHandler(app, diContainer);
     applyNotFoundHandler(app, diContainer);
 }
 
-module.exports = {
+export {
     applyAllHandlers
 };

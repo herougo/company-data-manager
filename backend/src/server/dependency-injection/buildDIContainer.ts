@@ -1,6 +1,6 @@
-const Logger = require("../../utils/logger");
-const DependencyInjectionContainer = require("./container");
-const DI_NAMES = require("./names");
+import Logger from "../../utils/logger";
+import DependencyInjectionContainer from "./container";
+import DI_NAMES from "./names";
 
 
 const buildDIContainer = (customDependenciesMap) => {
@@ -11,4 +11,4 @@ const buildDIContainer = (customDependenciesMap) => {
     return container;
 }
 
-module.exports = buildDIContainer;
+export default buildDIContainer;

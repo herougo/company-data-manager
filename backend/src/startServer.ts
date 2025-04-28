@@ -1,6 +1,6 @@
-const CONFIG = require("./config");
-const createApp = require("./server/createApp");
-const createServer = require("./server/createServer");
+import CONFIG from "./config";
+import createApp from "./server/createApp";
+import createServer from "./server/createServer";
 
 const startApp = async (customDependenciesMap = null) => {
     const { app, diContainer } = await createApp(customDependenciesMap);

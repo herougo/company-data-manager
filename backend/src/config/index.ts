@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import { ENVIRONMENTS } from "../utils/enums";
-import { ConfigError, UndefinedEnvironment } from "../utils/errors/internalErrors";
+import { InvalidConfigError, UndefinedEnvironment } from "../utils/errors/internalErrors";
 
 const buildConfig = () => {
     const nodeEnv = process.env.NODE_ENV;
@@ -22,7 +22,7 @@ const buildConfig = () => {
     }
 
     if (config.serverPort === undefined) {
-        throw new ConfigError();
+        throw new InvalidConfigError();
     }
 
     return config;

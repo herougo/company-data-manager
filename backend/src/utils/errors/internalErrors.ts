@@ -12,7 +12,7 @@ class ExistingDependencyError extends Error {
     }
 }
 
-class InvalidConfig extends Error {
+class InvalidConfigError extends Error {
     constructor() {
         super();
         this.message = "Config is invalid!";
@@ -27,5 +27,5 @@ class UndefinedEnvironment extends Error {
 }
 
 export {
-    MissingDependencyError, ExistingDependencyError, InvalidConfig, UndefinedEnvironment
+    MissingDependencyError, ExistingDependencyError, InvalidConfigError, UndefinedEnvironment
 };

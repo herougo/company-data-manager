@@ -1,13 +1,21 @@
 
 import { MissingDependencyError, ExistingDependencyError } from "../../utils/errors/internalErrors";
+import Logger from "../../utils/logger";
+
+export type Dependency = Logger | Service | Repository;
+export type DependencyMap = Record<string, Dependency>;
+
 
 class DependencyInjectionContainer {
-    constructor(customDependenciesMap) {
+    customDependenciesMap: DependencyMap;
+    dependencies: DependencyMap;
+
+    constructor(customDependenciesMap: DependencyMap) {
         this.customDependenciesMap = customDependenciesMap;
-        this.dependencies = {...customDependenciesMap} || {};
+        this.dependencies = {...customDependenciesMap};
     }
 
-    register(name, dependency) {
+    register(name: string, dependency: Dependency) {
         if (name in this.dependencies) {
             if (name in this.customDependenciesMap) {
                 return this.resolve(name);
@@ -19,7 +27,7 @@ class DependencyInjectionContainer {
         return dependency;
     }
 
-    resolve(name) {
+    resolve(name: string) {
         if (!(name in this.dependencies)) {
             throw new MissingDependencyError(name);
         }

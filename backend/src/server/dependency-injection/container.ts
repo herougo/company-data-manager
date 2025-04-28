@@ -10,8 +10,8 @@ class DependencyInjectionContainer {
     customDependenciesMap: DependencyMap;
     dependencies: DependencyMap;
 
-    constructor(customDependenciesMap: DependencyMap) {
-        this.customDependenciesMap = customDependenciesMap;
+    constructor(customDependenciesMap: DependencyMap | null) {
+        this.customDependenciesMap = customDependenciesMap || {};
         this.dependencies = {...customDependenciesMap};
     }
 

@@ -1,18 +1,18 @@
 
 class Logger {
-    error(text) {
+    error(text: string) {
         console.error(text);
     }
 
-    log(text) {
+    log(text: string) {
         console.log(text);
     }
 
-    warn(text) {
+    warn(text: string) {
         console.warn(text);
     }
 
-    debug(text) {
+    debug(text: string) {
         console.debug(text);
     }
 }

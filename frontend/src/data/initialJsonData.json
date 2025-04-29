@@ -1,0 +1,51 @@
+{
+	"author": null,
+	"date": null,
+	"company_data": [
+		{
+			"about": {
+				"name": null,
+				"brief_description": "unknown",
+				"detailed_description": "unknown",
+				"products": "unknown"
+			},
+			"comments": [
+				
+			],
+			"hires_interns": {
+				"answer": "unknown",
+				"sources": []
+			},
+			"glassdoor_rating": "unknown",
+			"available_in_canada": {
+				"answer": "unknown",
+				"sources": []
+			},
+			"Canada_office_locations": {
+				"answer": "unknown",
+				"sources": []
+			},
+			"remote_available": {
+				"answer": "unknown",
+				"sources": []
+			},
+			"found_how": {
+				"answer": "unknown",
+				"sources": "unknown"
+			},
+			"tech_stack": "unknown",
+			"links": {
+				"website": "unknown",
+				"careers_page": "unknown",
+				"page_with_values": "unknown",
+				"linkedin_page": "unknown",
+				"sample_job_postings": [],
+				"employee_pages": {
+					"software_developer_with_technology_listed": [],
+					"hiring_manager": "unknown",
+					"talent_acquisition / recruiter": "unknown"
+				}
+			}
+		}
+	]
+}

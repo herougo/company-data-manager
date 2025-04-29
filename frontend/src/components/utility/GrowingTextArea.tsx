@@ -1,8 +1,8 @@
-import React, { Dispatch, RefObject, SetStateAction, useEffect, useRef } from 'react';
+import { Dispatch, HTMLProps, RefObject, SetStateAction, useEffect, useRef } from 'react';
 import useWindowDimensions, { WindowDimensions } from '../../hooks/useWindowDimensions';
 
 
-export type GrowingTextAreaProps = React.HTMLProps<HTMLTextAreaElement> & {
+export type GrowingTextAreaProps = HTMLProps<HTMLTextAreaElement> & {
     maxHeightFn: (windowDimensions: WindowDimensions) => number,
     content: string
     setContent: Dispatch<SetStateAction<string>>

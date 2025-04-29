@@ -2,29 +2,24 @@
 // plain old objects.
 
 const AjvTypes = {
-    StringOrNull: {
-        anyOf: [
-            {type: "string"},
-            {type: null}
-        ]
-    },
+    StringOrNull: { type: ["string", "null"] },
     StringArray: { type: 'array', items: { type: 'string' }},
     UnknownOrString: {
         anyOf: [
             {type: "string"},
-            {enum: ["unknown"]}
+            {type: "string", enum: ["unknown"]}
         ]
     },
     UnknownOrFloat32: {
         anyOf: [
-            {type: "float32"},
-            {enum: ["unknown"]}
+            {type: "string"},
+            {type: "string", enum: ["unknown"]}
         ]
     },
     UnknownOrStringArray: {
         anyOf: [
             { type: 'array', items: { type: 'string' }},
-            {enum: ["unknown"]}
+            {type: "string", enum: ["unknown"]}
         ]
     }
 };

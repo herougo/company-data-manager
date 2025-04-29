@@ -18,12 +18,10 @@ const companyAboutSchema = {
         brief_description: AjvTypes.UnknownOrString,
 	    detailed_description: AjvTypes.UnknownOrString,
 		products: {
-			type: {
-				anyOf: [
-					{ enum: ["unknown"] },
-					{ type: 'array', items: { type: companyProductSchema } }
-				]
-			}
+			anyOf: [
+				{ type: "string", enum: ["unknown"] },
+				{ type: 'array', items: companyProductSchema }
+			]
 		}
     },
     allRequired: true,
@@ -33,7 +31,7 @@ const companyAboutSchema = {
 const yesNoUnknownAnswerSchema = {
     type: "object",
     properties: {
-        answer: { enum: ["unknown", "yes", "no"] },
+        answer: { type: "string", enum: ["unknown", "yes", "no"] },
 	    sources: AjvTypes.StringArray
     },
     allRequired: true,
@@ -108,12 +106,10 @@ const companyDataItemSchema = {
         remote_available: yesNoUnknownAnswerSchema,
         found_how: companyFieldStringAnswerSchema,
         tech_stack: {
-			type: {
-				anyOf: [
-					{ enum: "unknown" },
-					{ type: 'array', items: companyTechStackItemSchema }
-				]
-			}
+			anyOf: [
+				{ type: "string", enum: ["unknown"] },
+				{ type: 'array', items: companyTechStackItemSchema }
+			]
 		},
         links: companyLinksSchema
     },

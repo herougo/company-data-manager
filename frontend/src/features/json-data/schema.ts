@@ -14,7 +14,7 @@ const companyProductSchema = {
 const companyAboutSchema = {
 	type: "object",
     properties: {
-        name: AjvTypes.UnknownOrString,
+        name: AjvTypes.StringOrNull,
         brief_description: AjvTypes.UnknownOrString,
 	    detailed_description: AjvTypes.UnknownOrString,
 		products: {

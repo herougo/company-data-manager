@@ -31,7 +31,7 @@
 			},
 			"found_how": {
 				"answer": "unknown",
-				"sources": "unknown"
+				"sources": []
 			},
 			"tech_stack": "unknown",
 			"links": {

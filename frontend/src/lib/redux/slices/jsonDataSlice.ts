@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import * as initialJsonData from '../../../data/initialJsonData.json';
+import initialJsonData from '../../../data/initialJsonData.json';
 
 export const jsonDataSlice = createSlice({
     name: 'jsonData',
     initialState: initialJsonData,
     reducers: {
         replace: (_state, action) => {
-            return action.payload
+            return action.payload;
         },
     },
 });

@@ -28,7 +28,7 @@ export type CompanyTechStackItem = {
 export type CompanyEmployeePages = {
     "software_developer_with_technology_listed": "unknown" | string[],
 	"hiring_manager": "unknown" | string[],
-	"talent_acquisition / recruiter": "unknown" | string[]
+	"talent_acquisition_or_recruiter": "unknown" | string[]
 };
 
 export type CompanyLinks = {

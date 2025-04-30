@@ -7,7 +7,7 @@ import RouteCollection from './pages/RouteCollection';
 function App() {
     return (
         <BrowserRouter>
-            <div className="App">
+            <div className="App bg-gray-900 h-full">
                 <RouteCollection />
             </div>
         </BrowserRouter>

@@ -1,5 +1,4 @@
 import MainContent from '../../layouts/main-content/MainContent';
-import './MainPage.css';
 import { Outlet } from 'react-router-dom';
 
 const MainPage = () => {

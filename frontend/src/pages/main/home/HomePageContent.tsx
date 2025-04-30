@@ -50,10 +50,16 @@ const HomePageContent = () => {
                     </TabsTrigger>
                 </TabsList>
                 <div className='w-full p-[10px] bg-gray-700 h-full rounded-[5px]'>
-                    <TabsContent value={JsonTabValue.RawJson}>
+                    <TabsContent
+                        value={JsonTabValue.RawJson}
+                        className='h-full'
+                    >
                         <RawJSONTabContent />
                     </TabsContent>
-                    <TabsContent value={JsonTabValue.Input}>
+                    <TabsContent
+                        value={JsonTabValue.Input}
+                        className='h-full'
+                    >
                         <InputTabContent />
                     </TabsContent>
                 </div>

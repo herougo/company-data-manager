@@ -31,7 +31,7 @@ const companyAboutSchema = {
 const yesNoUnknownAnswerSchema = {
     type: "object",
     properties: {
-        answer: { type: "string", enum: ["unknown", "yes", "no"] },
+        answer: { type: "string", enum: ["unknown", "yes", "no", "couldn't find"] },
 	    sources: AjvTypes.StringArray
     },
     allRequired: true,

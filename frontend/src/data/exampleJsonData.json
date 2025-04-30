@@ -1,0 +1,60 @@
+{
+	"author": "Henri Romel",
+	"date": "April 27, 2025",
+	"company_data": [
+		{
+			"about": {
+				"name": "Google",
+				"brief_description": "internet search and other stuff",
+				"detailed_description": "unknown",
+				"products": "unknown"
+			},
+			"comments": [
+				"highly competitive"
+			],
+			"hires_interns": {
+				"answer": "yes",
+				"sources": ["https://google.com"]
+			},
+			"glassdoor_rating": "4.3",
+			"available_in_canada": {
+				"answer": "yes",
+				"sources": ["https://google.com", "https://google.com"]
+			},
+			"Canada_office_locations": {
+				"answer": ["toronto", "waterloo"],
+				"sources": ["https://google.com", "https://google.com"]
+			},
+			"remote_available": {
+				"answer": "couldn't find",
+				"sources": []
+			},
+			"found_how": {
+				"answer": "unknown",
+				"sources": []
+			},
+			"tech_stack": [
+				{
+					"technology": "C#",
+					"sources": ["https://google.com"]
+				},
+				{
+					"technology": "GCP",
+					"sources": ["https://google.com", "https://google.com"]
+				}
+			],
+			"links": {
+				"website": "https://google.com",
+				"careers_page": "https://google.com/careers",
+				"page_with_values": "https://google.com/values",
+				"linkedin_page": "https://google.com/values",
+				"sample_job_postings": ["https://google.com"],
+				"employee_pages": {
+					"software_developer_with_technology_listed": ["https://linkedin.com", "https://linkedin.com"],
+					"hiring_manager": ["https://linkedin.com"],
+					"talent_acquisition_or_recruiter": ["https://linkedin.com"]
+				}
+			}
+		}
+	]
+}

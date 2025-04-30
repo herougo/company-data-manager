@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const MainPage = () => {
     return (
-        <div className='main-page'>
+        <div className='main-page h-full'>
             <MainContent>
                 <Outlet />
             </MainContent>

@@ -3,7 +3,7 @@ import initialJsonData from '../../../data/initialJsonData.json';
 
 export const jsonDataSlice = createSlice({
     name: 'jsonData',
-    initialState: initialJsonData,
+    initialState: JSON.stringify(initialJsonData),
     reducers: {
         replace: (_state, action) => {
             return action.payload;

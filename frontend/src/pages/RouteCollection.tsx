@@ -6,10 +6,10 @@ import HomePageContent from './main/home/HomePageContent';
 const RouteCollection = () => {
     return (
         <Routes>
-            <Route exact path="/" element={
+            <Route path="/" element={
                 <MainPage />
             }>
-                <Route exact path="/" element={
+                <Route path="/" element={
                     <HomePageContent />
                 }></Route>
             </Route>

@@ -1,9 +1,10 @@
+import { HTMLProps } from 'react';
 import './MainContent.css';
 
-const MainContent = () => {
+const MainContent = (props: HTMLProps<HTMLDivElement>) => {
     return (
         <div className='main-content'>
-            
+            {props.children}
         </div>
     );
 }

@@ -1,12 +1,16 @@
-import './App.css'
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
 import './assets/global.css';
+import RouteCollection from './pages/RouteCollection';
 
 
 function App() {
     return (
-        <div className='app'>
-            
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <RouteCollection />
+            </div>
+        </BrowserRouter>
     )
 }
 

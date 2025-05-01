@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import InputTabContent from './tabs/InputTabContent';
 import RawJSONTabContent from './tabs/RawJSONTabContent';
 import { useState } from 'react';
+import useRawJSONTabContentPropData from "./tabs/hooks/useRawJSONTabContentPropData";
 
 
 enum JsonTabValue {
@@ -20,6 +21,7 @@ const tabBackgroundColour = (selectedTab: string, relevantTab: string): string =
 
 const HomePageContent = () => {
     const [tab, setTab] = useState<string>(JsonTabValue.RawJson);
+    const rawJsonTabContentPropData = useRawJSONTabContentPropData();
 
     const onTabValueChange = (value: string): void => {
         setTab(value);
@@ -54,7 +56,7 @@ const HomePageContent = () => {
                         value={JsonTabValue.RawJson}
                         className='h-full'
                     >
-                        <RawJSONTabContent />
+                        <RawJSONTabContent propData={rawJsonTabContentPropData} />
                     </TabsContent>
                     <TabsContent
                         value={JsonTabValue.Input}

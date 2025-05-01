@@ -1,11 +1,5 @@
-import { validate } from "@/features/json-data";
-import React, { useState } from "react";
-
-enum ValidationState {
-    Unvalidated = "unvalidated",
-    Validated = "validated",
-    Error = "error"
-};
+import { HTMLProps } from "react";
+import { RawJSONTabContentData, ValidationState } from "./hooks/useRawJSONTabContentPropData";
 
 const validationStateToBgColor = (validationState: string): string => {
     switch (validationState) {
@@ -18,42 +12,13 @@ const validationStateToBgColor = (validationState: string): string => {
     }
 };
 
-const RawJSONTabContent = () => {
-    const [content, setContent] = useState('');
-    const [validationState, setValidationState] = useState(ValidationState.Unvalidated);
-    const [validationErrors, setValidationErrors] = useState<object[]>([]);
+export type RawJSONTabContentProps = HTMLProps<HTMLElement> & {
+    propData: RawJSONTabContentData
+}
 
-    const textareaOnInput = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
-        setContent(e.target.value);
-        setValidationState(ValidationState.Unvalidated);
-    };
+const RawJSONTabContent = (props: RawJSONTabContentProps) => {
+    const {content, textareaOnInput, validationState, validateBtnOnClick} = props.propData;
 
-    const validateBtnOnClick = () => {
-        let jsonData = null;
-        
-        try {
-            jsonData = JSON.parse(content);
-        } catch (ex) {
-            setValidationState(ValidationState.Error);
-            if (ex instanceof Error) {
-                setValidationErrors([{message: ex.message}]);
-            } else {
-                setValidationErrors([]);
-            }
-            return;
-        }
-
-        const { valid, errors } = validate(jsonData);
-        
-        if (valid) {
-            setValidationState(ValidationState.Validated);
-            setValidationErrors([]);
-        } else {
-            setValidationState(ValidationState.Error);
-            setValidationErrors(errors);
-        }
-    }
-    
     return (
         <div className='h-full'>
             <textarea

@@ -2,7 +2,7 @@ import Ajv from 'ajv';
 import ajvKeywords from "ajv-keywords";
 import companyDataSubmissionSchema from './schema';
 
-const ajv = new Ajv();
+const ajv = new Ajv({allErrors: true});
 ajvKeywords(ajv);
 
 const ajvValidate = ajv.compile(companyDataSubmissionSchema);

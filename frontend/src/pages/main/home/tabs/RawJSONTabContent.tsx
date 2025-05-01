@@ -29,7 +29,7 @@ const RawJSONTabContent = () => {
     };
 
     const validateBtnOnClick = () => {
-        let jsonData = null
+        let jsonData = null;
         
         try {
             jsonData = JSON.parse(content);
@@ -40,18 +40,17 @@ const RawJSONTabContent = () => {
             } else {
                 setValidationErrors([]);
             }
-            console.log(validationErrors);
+            return;
         }
 
         const { valid, errors } = validate(jsonData);
-
+        
         if (valid) {
             setValidationState(ValidationState.Validated);
             setValidationErrors([]);
         } else {
             setValidationState(ValidationState.Error);
             setValidationErrors(errors);
-            console.log(validationErrors);
         }
     }
     

@@ -1,7 +1,8 @@
 import { validate } from "@/features/json-data";
 import React, { useState } from "react";
 import { ValidationState } from "./types";
-import { CustomErrorObject, transformJsonParsingError } from "@/features/json-data/errorParsing";
+import { transformJsonParsingError } from "@/features/json-data/errorParsing";
+import { CustomErrorObject } from "@/features/json-data/errorParsing.types";
 
 
 const useRawJSONTabContentPropData = () => {

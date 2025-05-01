@@ -1,4 +1,4 @@
-import { CustomErrorObject } from "@/features/json-data/errorParsing";
+import { CustomErrorObject } from "@/features/json-data/errorParsing.types";
 import { HTMLProps } from "react";
 
 export type ErrorsTabContentPropsData = {

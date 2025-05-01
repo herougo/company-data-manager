@@ -1,4 +1,4 @@
-import { CustomErrorObject } from "@/features/json-data/errorParsing";
+import { CustomErrorObject } from "@/features/json-data/errorParsing.types";
 import React, { Dispatch, SetStateAction, HTMLProps } from "react";
 
 export enum ValidationState {

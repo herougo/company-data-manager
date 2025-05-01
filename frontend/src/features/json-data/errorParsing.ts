@@ -1,10 +1,6 @@
 import { ErrorObject } from "ajv";
+import { CustomErrorObject, InputErrorObject } from "./errorParsing.types";
 
-export type InputErrorObject = Error | ErrorObject;
-
-export type CustomErrorObject = {
-    message: string
-};
 
 const isAjvError = (error: InputErrorObject): error is ErrorObject => {
     return "instancePath" in error;

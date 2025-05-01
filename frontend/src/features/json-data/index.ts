@@ -1,5 +1,5 @@
-import validate from "./validate";
+import validateCompanyDataSubmission from "./validate";
 
 export {
-    validate
+    validateCompanyDataSubmission
 }

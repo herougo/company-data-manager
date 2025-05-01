@@ -7,10 +7,10 @@ ajvKeywords(ajv);
 
 const ajvValidate = ajv.compile(companyDataSubmissionSchema);
 
-const validate = (data: object) => {
+const validateCompanyDataSubmission = (data: object) => {
     const valid = ajvValidate(data);
     const errors = ajvValidate.errors || [];
     return { valid, errors };
 }
 
-export default validate;
+export default validateCompanyDataSubmission;

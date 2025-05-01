@@ -1,4 +1,4 @@
-import { validate } from "@/features/json-data";
+import { validateCompanyDataSubmission } from "@/features/json-data";
 import React, { useState } from "react";
 import { ValidationState } from "./types";
 import { transformJsonParsingError } from "@/features/json-data/errorParsing";
@@ -30,7 +30,7 @@ const useRawJSONTabContentPropData = () => {
             return;
         }
 
-        const { valid, errors } = validate(jsonData);
+        const { valid, errors } = validateCompanyDataSubmission(jsonData);
         
         if (valid) {
             setValidationState(ValidationState.Validated);

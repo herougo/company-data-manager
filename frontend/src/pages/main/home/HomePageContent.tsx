@@ -1,8 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import InputTabContent from './tabs/InputTabContent/InputTabContent';
-import RawJSONTabContent from './tabs/RawJSONTabContent/RawJSONTabContent';
+import { RawJSONTabContent, useRawJSONTabContentPropData } from './tabs/RawJSONTabContent';
 import { useState } from 'react';
-import useRawJSONTabContentPropData from "./tabs/RawJSONTabContent/useRawJSONTabContentPropData";
 
 
 enum JsonTabValue {

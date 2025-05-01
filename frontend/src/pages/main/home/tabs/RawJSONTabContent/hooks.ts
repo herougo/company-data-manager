@@ -1,22 +1,7 @@
 import { validate } from "@/features/json-data";
-import React, { useState, Dispatch, SetStateAction } from "react";
+import React, { useState } from "react";
+import { ValidationState } from "./types";
 
-export enum ValidationState {
-    Unvalidated = "unvalidated",
-    Validated = "validated",
-    Error = "error"
-};
-
-export type RawJSONTabContentData = {
-    content: string,
-    setContent: Dispatch<SetStateAction<string>>,
-    validationState: string,
-    setValidationState: Dispatch<SetStateAction<string>>,
-    validationErrors: object[],
-    setValidationErrors: Dispatch<SetStateAction<object[]>>,
-    textareaOnInput: (e: React.ChangeEvent<HTMLTextAreaElement>) => void,
-    validateBtnOnClick: () => void
-}
 
 const useRawJSONTabContentPropData = () => {
     const [content, setContent] = useState('');
@@ -66,4 +51,6 @@ const useRawJSONTabContentPropData = () => {
     }
 }
 
-export default useRawJSONTabContentPropData;
+export {
+    useRawJSONTabContentPropData
+};

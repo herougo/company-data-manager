@@ -1,5 +1,4 @@
-import { HTMLProps } from "react";
-import { RawJSONTabContentData, ValidationState } from "./useRawJSONTabContentPropData";
+import { RawJSONTabContentProps, ValidationState } from "./types";
 
 const validationStateToBgColor = (validationState: string): string => {
     switch (validationState) {
@@ -11,10 +10,6 @@ const validationStateToBgColor = (validationState: string): string => {
             return 'bg-red-300';
     }
 };
-
-export type RawJSONTabContentProps = HTMLProps<HTMLElement> & {
-    propData: RawJSONTabContentData
-}
 
 const RawJSONTabContent = (props: RawJSONTabContentProps) => {
     const {content, textareaOnInput, validationState, validateBtnOnClick} = props.propData;

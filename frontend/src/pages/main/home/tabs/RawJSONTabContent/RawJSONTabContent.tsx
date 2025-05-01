@@ -1,5 +1,5 @@
 import { HTMLProps } from "react";
-import { RawJSONTabContentData, ValidationState } from "./hooks/useRawJSONTabContentPropData";
+import { RawJSONTabContentData, ValidationState } from "./useRawJSONTabContentPropData";
 
 const validationStateToBgColor = (validationState: string): string => {
     switch (validationState) {

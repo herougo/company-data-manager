@@ -1,12 +1,12 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import InputTabContent from './tabs/InputTabContent/InputTabContent';
 import { RawJSONTabContent, useRawJSONTabContentPropData } from './tabs/RawJSONTabContent';
 import { useState } from 'react';
+import ErrorsTabContent from "./tabs/ErrorsTabContent/ErrorsTabContent";
 
 
 enum JsonTabValue {
     RawJson = "raw-json",
-    Input = "input"
+    Errors = "errors"
 };
 
 const tabBackgroundColour = (selectedTab: string, relevantTab: string): string => {
@@ -27,7 +27,7 @@ const HomePageContent = () => {
     };
 
     const rawJsonTabsTriggerClasses = tabBackgroundColour(tab, JsonTabValue.RawJson);
-    const inputTabsTriggerClasses = tabBackgroundColour(tab, JsonTabValue.Input);
+    const errorsTabsTriggerClasses = tabBackgroundColour(tab, JsonTabValue.Errors);
 
     return (
         <div className='home-content h-full flex items-center justify-center'>
@@ -44,10 +44,10 @@ const HomePageContent = () => {
                         Raw JSON
                     </TabsTrigger>
                     <TabsTrigger
-                        value={JsonTabValue.Input}
-                        className={inputTabsTriggerClasses}
+                        value={JsonTabValue.Errors}
+                        className={errorsTabsTriggerClasses}
                     >
-                        Input
+                        Errors
                     </TabsTrigger>
                 </TabsList>
                 <div className='w-full p-[10px] bg-gray-700 h-full rounded-[5px]'>
@@ -58,10 +58,10 @@ const HomePageContent = () => {
                         <RawJSONTabContent propData={rawJsonTabContentPropData} />
                     </TabsContent>
                     <TabsContent
-                        value={JsonTabValue.Input}
+                        value={JsonTabValue.Errors}
                         className='h-full'
                     >
-                        <InputTabContent />
+                        <ErrorsTabContent />
                     </TabsContent>
                 </div>
             </Tabs>

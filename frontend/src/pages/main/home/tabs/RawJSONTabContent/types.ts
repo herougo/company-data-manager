@@ -1,3 +1,4 @@
+import { CustomErrorObject } from "@/features/json-data/errorParsing";
 import React, { Dispatch, SetStateAction, HTMLProps } from "react";
 
 export enum ValidationState {
@@ -11,8 +12,8 @@ export type RawJSONTabContentPropData = {
     setContent: Dispatch<SetStateAction<string>>,
     validationState: string,
     setValidationState: Dispatch<SetStateAction<string>>,
-    validationErrors: object[],
-    setValidationErrors: Dispatch<SetStateAction<object[]>>,
+    validationErrors: CustomErrorObject[],
+    setValidationErrors: Dispatch<SetStateAction<CustomErrorObject[]>>,
     textareaOnInput: (e: React.ChangeEvent<HTMLTextAreaElement>) => void,
     validateBtnOnClick: () => void
 }

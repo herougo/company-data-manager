@@ -1,7 +1,15 @@
-const ErrorsTabContent = () => {
+import { ErrorsTabContentProps } from "./types";
+
+
+const ErrorsTabContent = (props: ErrorsTabContentProps) => {
+    const { validationErrors } = props.propsData;
     return (
         <div>
-            Errors Tab
+            {
+                validationErrors.map((validationError) => {
+                    return <div>{validationError.message}</div>
+                })
+            }
         </div>
     );
 }

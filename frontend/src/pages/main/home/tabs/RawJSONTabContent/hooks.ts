@@ -1,12 +1,13 @@
 import { validate } from "@/features/json-data";
 import React, { useState } from "react";
 import { ValidationState } from "./types";
+import { CustomErrorObject, transformJsonParsingError } from "@/features/json-data/errorParsing";
 
 
 const useRawJSONTabContentPropData = () => {
     const [content, setContent] = useState('');
     const [validationState, setValidationState] = useState<string>(ValidationState.Unvalidated);
-    const [validationErrors, setValidationErrors] = useState<object[]>([]);
+    const [validationErrors, setValidationErrors] = useState<CustomErrorObject[]>([]);
 
     const textareaOnInput = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
         setContent(e.target.value);
@@ -21,7 +22,7 @@ const useRawJSONTabContentPropData = () => {
         } catch (ex) {
             setValidationState(ValidationState.Error);
             if (ex instanceof Error) {
-                setValidationErrors([{message: ex.message}]);
+                setValidationErrors([transformJsonParsingError(ex)]);
             } else {
                 setValidationErrors([]);
             }
@@ -35,7 +36,7 @@ const useRawJSONTabContentPropData = () => {
             setValidationErrors([]);
         } else {
             setValidationState(ValidationState.Error);
-            setValidationErrors(errors);
+            setValidationErrors(errors.map(transformJsonParsingError));
         }
     }
 

@@ -1,3 +1,4 @@
+import BlueButton from "@/components/styling-wrappers/BlueButton";
 import { RawJSONTabContentProps, ValidationState } from "./types";
 
 const validationStateToBgColor = (validationState: string): string => {
@@ -22,12 +23,12 @@ const RawJSONTabContent = (props: RawJSONTabContentProps) => {
                 className={`${validationStateToBgColor(validationState)} resize-none w-full h-9/10`}
             />
             <div className='h-1/10'>
-                <button
-                    className='p-[0.5rem] bg-blue-500 text-white text-base border-0 rounded-full whitespace-nowrap cursor-pointer hover:bg-blue-300 active:bg-blue-500'
+                <BlueButton
+                    className='p-[0.5rem]'
                     onClick={validateBtnOnClick}
                 >
                     Validate Raw JSON
-                </button>
+                </BlueButton>
             </div>
         </div>
     );

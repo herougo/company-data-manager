@@ -1,21 +1,9 @@
-import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
+import IntrinsicButton from '../intrinsic/IntrinsicButton';
+import withStyle from '../hoc/withStyle';
 
-export type ButtonProps = DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
->;
-
-const BlueButton = (props: ButtonProps) => {
-    const { children, className, ...propsRest } = props;
-
-    const tailwindClasses = 'bg-blue-500 text-white text-base border-0 rounded-full whitespace-nowrap cursor-pointer hover:bg-blue-300 active:bg-blue-500';
-    const newClassName = !className ? tailwindClasses : `${className} ${tailwindClasses}`;
-
-    return (
-        <button className={newClassName} {...propsRest}>
-            {children}
-        </button>
-    );
-}
+const BlueButton = withStyle(
+    IntrinsicButton,
+    'bg-blue-500 text-white text-base border-0 rounded-full whitespace-nowrap cursor-pointer hover:bg-blue-300 active:bg-blue-500'
+);
 
 export default BlueButton;

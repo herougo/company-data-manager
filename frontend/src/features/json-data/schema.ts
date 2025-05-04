@@ -84,6 +84,7 @@ const companyLinksSchema = {
     properties: {
         website: AjvTypes.UnknownOrString,
 		careers_page: AjvTypes.UnknownOrString,
+        open_source_links: AjvTypes.UnknownOrStringArray,
 		page_with_values: AjvTypes.UnknownOrString,
 		linkedin_page: AjvTypes.UnknownOrString,
 		sample_job_postings: AjvTypes.UnknownOrStringArray,

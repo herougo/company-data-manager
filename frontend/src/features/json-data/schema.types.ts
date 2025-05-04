@@ -34,6 +34,7 @@ export type CompanyEmployeePages = {
 export type CompanyLinks = {
     "website": "unknown" | string,
     "careers_page": "unknown" | string,
+    "open_source_links": "unknown" | string[],
     "page_with_values": "unknown" | string,
     "linkedin_page": "unknown" | string,
     "sample_job_postings": "unknown" | string[],

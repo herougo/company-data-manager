@@ -46,6 +46,7 @@
 			"links": {
 				"website": "https://google.com",
 				"careers_page": "https://google.com/careers",
+				"open_source_links": [],
 				"page_with_values": "https://google.com/values",
 				"linkedin_page": "https://google.com/values",
 				"sample_job_postings": ["https://google.com"],

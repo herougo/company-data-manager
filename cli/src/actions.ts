@@ -18,8 +18,9 @@ const validateAction = (source: string) => {
     if (valid) {
         console.log('Validation passed!');
     }
+    console.log('Validation failed!');
     for (const error of errors) {
-        console.log(transformJsonParsingError(error).message);
+        console.log('    ' + transformJsonParsingError(error).message);
     }
 };
 

@@ -1,5 +1,6 @@
-const readJsonFile(path: string)
+const readJsonFile = (path: string): object => {
     return {};
+}
 
 export {
     readJsonFile

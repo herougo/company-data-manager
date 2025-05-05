@@ -4,7 +4,7 @@ export type CompanyProduct = {
 }
 
 export type CompanyAbout = {
-    "name": null | "string",
+    "name": "string",
     "brief_description": "unknown" | string,
     "detailed_description": "unknown" | string,
     "products": "unknown" | CompanyProduct[]
@@ -55,7 +55,7 @@ export type CompanyDataItem = {
 };
 
 export type CompanyDataSubmission = {
-    "author": null | string,
-    "date": null | string,
+    "author": string,
+    "date": string,
     "company_data": CompanyDataItem[]
 };

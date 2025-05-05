@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "build": "tsc",
-    "validate": "node dist/cdm.js validate"
+    "validate": "node dist/cdm.js validate",
+    "to-tsv": "node dist/cdm.js to-tsv"
   },
   "author": "",
   "license": "ISC",

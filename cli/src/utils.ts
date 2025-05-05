@@ -1,5 +1,9 @@
+import fs from 'fs';
+
 const readJsonFile = (path: string): object => {
-    return {};
+    const data = fs.readFileSync(path).toString();
+
+    return JSON.parse(data);
 }
 
 export {
